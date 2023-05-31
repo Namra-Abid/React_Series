@@ -1,6 +1,6 @@
 
 import React from 'react'
-
+import PropTypes from 'prop-types'
 export default function Navbar(props) {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -15,7 +15,7 @@ export default function Navbar(props) {
           <a className="nav-link" href="/">Home <span className="sr-only">(current)</span></a>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="/">Link</a>
+          <a className="nav-link" href="/">{props.aboutText}</a>
         </li>
       </ul>
       <form className="form-inline my-2 my-lg-0">
@@ -26,4 +26,9 @@ export default function Navbar(props) {
   </nav>
 
   )
+}
+
+Navbar.PropTypes={
+    title: PropTypes.string,
+    aboutText:PropTypes.string
 }
