@@ -28,7 +28,7 @@ class ChangeText2 extends Component {
                 <h1>{this.state.message}</h1>
                 <textarea className="form-control" id="myBox" rows="8"></textarea>
                 <br></br>
-                <button onClick={()=> this.ChangeMessage()}> Change Heading</button>
+                <button onClick={()=> this.ChangeMessage()}> Change Heading Again and Again</button>
             </div>
         )
     }
