@@ -16,7 +16,8 @@ export default function TextForm(props) {
    // setText("New text"); // correct way to change  state
    
     return (
-        <div>
+        <>
+        <div className='container'>
             <h1>{props.heading}</h1>
             <div class="mb-3">
                 <textarea class="form-control" value={text} onChange={HandeOnChange} id="myBox" rows="8"></textarea>
@@ -24,5 +25,8 @@ export default function TextForm(props) {
             <button className="btn btn-primary" onClick={HandleUpClick}>Convert to Upper Case</button>
 
         </div>
+
+        </>
+        
     )
 }
