@@ -20,6 +20,12 @@ export default function TextForm(props) {
       
         setText('');
     }
+
+    const handleExtraSpaces =()=>{
+        let newtext=text.split(/[ ]+/);
+        setText(newtext.join(" "))
+
+    }
     //text="new text"  // wrong way to change state
    // setText("New text"); // correct way to change  state
    
@@ -33,6 +39,7 @@ export default function TextForm(props) {
             <button className="btn btn-primary mx-2" onClick={HandleUpClick}>Convert to Upper Case</button>
             <button className="btn btn-primary mx-2" onClick={HandleLowClick}>Convert to Lower Case</button>
             <button className="btn btn-primary mx-2" onClick={HandleClearText}>Clear Text</button>
+            <button className="btn btn-primary mx-2" onClick={handleExtraSpaces}>Remove Extra Spaces</button>
 
         </div>
         <div className="container">
