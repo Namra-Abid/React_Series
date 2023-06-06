@@ -14,7 +14,8 @@ function App() {
     if (mode=='light')
     {
       //mode='dark'  // wrong way
-      setMode('dark')  //right wat
+      setMode('dark')  //right way
+      document.body.style.backgroundColor='grey';
       console.log('clicked dark')
      
     }
@@ -22,6 +23,7 @@ function App() {
     //  mode='light' //wrong way
     setMode('light')//right way
     console.log('clicked light')
+    document.body.style.backgroundColor='white';
     
     }
   }
@@ -30,7 +32,7 @@ function App() {
     <div>
       <Navbar title="Text Utils Namra" aboutText="About Text Utils" mode={mode} togglemodefunc={togglemode}  />
       <div className='container my-3'>
-      <TextForm heading='Enter Text To Analyze' />
+      <TextForm heading='Enter Text To Analyze' mode={mode}/>
       <About/>
       </div>
     </div>

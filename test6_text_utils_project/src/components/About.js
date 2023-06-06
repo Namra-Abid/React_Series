@@ -5,7 +5,7 @@ import 'bootstrap/dist/js/bootstrap.min.js';
 export default function About() {
     const[mystyle,setmyStyle]=useState({
         color:'white',
-        backgroundColor:'black'
+        backgroundColor:'#36342e'
     })
     // let mystyle ={
     //     color:'white',
@@ -16,7 +16,7 @@ export default function About() {
       if (mystyle.color=='white')
       {
         setmyStyle({
-            color:'black',
+            color:'#36342e',
         backgroundColor:'white',
         border: '1px solid white'
         })
@@ -25,7 +25,7 @@ export default function About() {
       else{
         setmyStyle({
             color:'white',
-        backgroundColor:'black'
+        backgroundColor:'#36342e'
         })
         setbtnText("Enable Light Mode")
       }
