@@ -41,8 +41,8 @@ export default function TextForm(props) {
         <>
         <div className='container'>
             <h1>{props.heading}</h1>
-            <div class="mb-3">
-                <textarea class="form-control" value={text} onChange={HandeOnChange} id="myBox" rows="8"></textarea>
+            <div className="mb-3">
+                <textarea className="form-control" value={text} onChange={HandeOnChange} id="myBox" rows="8"></textarea>
             </div>
             <button className="btn btn-primary mx-2" onClick={HandleUpClick}>Convert to Upper Case</button>
             <button className="btn btn-primary mx-2" onClick={HandleLowClick}>Convert to Lower Case</button>
