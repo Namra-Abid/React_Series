@@ -18,9 +18,7 @@ function App() {
       document.body.style.backgroundColor='grey';
       console.log('clicked dark')
       ShowAlert('Dark mode enable','success')
-      setTimeout(()=>{
-        setAlert(null)
-      }, 3000) ;
+     
      
     }
     else{
@@ -29,9 +27,7 @@ function App() {
     console.log('clicked light')
     document.body.style.backgroundColor='white';
     ShowAlert('Light mode enable','success');
-    setTimeout(()=>{
-      setAlert(null)
-    }, 3000)  ;
+    
     
     }
   }
@@ -42,6 +38,9 @@ function App() {
       msg:message,
       typ:type
     })
+    setTimeout(()=>{
+      setAlert(null)
+    }, 3000)  ;
   }
    
 
@@ -50,7 +49,7 @@ function App() {
       <Navbar title="Text Utils Namra" aboutText="About Text Utils" mode={mode} togglemodefunc={togglemode}  />
       <Alert alert={alert}/>
       <div className='container my-3'>
-      <TextForm heading='Enter Text To Analyze' mode={mode}/>
+      <TextForm ShowAlert={ShowAlert} heading='Enter Text To Analyze' mode={mode}/>
       <About/>
       </div>
     </div>

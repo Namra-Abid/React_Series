@@ -7,6 +7,7 @@ export default function TextForm(props) {
         setText('You have clicked on handle up click');
         let newtext=text.toUpperCase();
         setText(newtext);
+        props.ShowAlert("Converted to Upper Case","success");
     }
     const HandeOnChange=(event)=>{
         console.log('on change');
@@ -15,6 +16,7 @@ export default function TextForm(props) {
     const HandleLowClick =()=>{
         let newtext=text.toLowerCase();
         setText(newtext);
+        props.ShowAlert("Converted to Lower Case","success");
     }
     const HandleClearText=()=>{
       
