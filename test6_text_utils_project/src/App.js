@@ -18,7 +18,11 @@ function App() {
       document.body.style.backgroundColor='grey';
       console.log('clicked dark')
       ShowAlert('Dark mode enable','success')
-     
+      document.title="Text Utils - Dark Mode"
+      //To change title dynamically ---start
+      setInterval(()=>{document.title='Text Utils - Amazing '},2000)
+      setInterval(()=>{document.title='Text Utils - Cool '},1500)     
+      //To change title dynamically ---end
      
     }
     else{
@@ -27,6 +31,7 @@ function App() {
     console.log('clicked light')
     document.body.style.backgroundColor='white';
     ShowAlert('Light mode enable','success');
+    document.title="Text Utils - Light Mode"
     
     
     }
